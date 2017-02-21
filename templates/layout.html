@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head language="{{ alt }}">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ '/css/foundation.css'|url }}">
+  <link rel="stylesheet" href="{{ '/css/app.css'|url }}">
+  <title>{% block title %}Welcome{% endblock %} — simonhewwingchun</title>
+</head>
+<body>
+  <header>
+    <h1>Simon Hew Wing Chun</h1>
+    <nav>
+      <ul class="nav navbar-nav">
+        <li{% if this._path == '/' %} class="active"{% endif
+          %}><a href="{{ '/'|url }}">Welcome</a></li>
+        {% for href, title in [
+          ['/projects', 'Projects'],
+          ['/about', 'About']
+        ] %}
+          <li{% if this.is_child_of(href) %} class="active"{% endif
+            %}><a href="{{ href|url }}">{{ title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <article>
+    <div class="row">
+      <div class="columns small-10">
+        <h2>{{ this.title }}</h2>
+      </div>
+      <div class="columns small-2">
+        {% for alt2 in alts %}
+          {% if alt2.locale != alt %}
+          <li><a href="{{ alt2.path }}">{{ alt2.name }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% block body %}{% endblock %}
+  </article>
+
+  <footer>
+    &copy; Copyright 2017 by Simon Hew.
+  </footer>
+</body>
+</html>

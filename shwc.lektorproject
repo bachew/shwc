@@ -1,0 +1,12 @@
+[project]
+name = simonhewwingchun
+
+[alternatives.en]
+name = English
+primary = yes
+locale = en
+
+[alternatives.zh]
+name = 中文
+url_prefix = /zh/
+locale = zh

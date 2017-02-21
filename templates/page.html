@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="{{ alt }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% if alt == 'zh' %}
+      {% set title_space = '' %}
+      {% set title_chunks = ['丘鸿桔咏春馆，', '吉隆坡，马来西亚'] %}
+    {% else %}
+      {% set title_space = ' ' %}
+      {% set title_chunks = ["Simon Hew's", 'Wing Chun Kwoon,', 'Kuala Lumpur, Malaysia'] %}
+    {% endif %}
+    {% set title = title_space.join(title_chunks) %}
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
+
+    <meta name="google-site-verification" content="0wGs8IfA7wF8lP-w1JpiNhGFumbnq-3k63VW2MeGaCc" />
+
+    {% if alt == 'zh' %}
+      {% set mission = '我们的使命是在马来西亚吉隆坡推广与延续咏春拳。' %}
+    {% else %}
+      {% set mission = 'Our mission is to promote and continue the art of Wing Chun here in Kuala Lumpur, Malaysia.' %}
+    {% endif %}
+    <meta name="title" content="{{ title }}" />
+    <meta itemprop="name" content="{{ title }}" />
+    <meta name="description" content="{{ mission }}" />
+    <meta itemprop="description" content="{{ mission }}" />
+    <meta id="meta-tag-description" property="og:description" content="{{ mission }}" />
+
+    <meta property="og:locale" content="{{ alt }}" />
+    {% for a in alts %}
+      {% if a.locale != alt %}
+    <meta property="og:locale:alternate" content="{{ a.locale }}" />
+      {% endif %}
+    {% endfor %}
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ mission }}" />
+    <meta property="og:image" content="/sifu.jpg" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="columns small-0 medium-1 large-2">
+        <div class="show-for-medium">&nbsp;</div>
+      </div>
+      <div class="columns small-12 medium-10 large-8">
+        <div class="page">
+          <div class="title-bar">
+            <div class="title-bar-left">
+              <h1>
+                {% for chunk in title_chunks %}
+                <div>{{ chunk }}</div>
+                {% endfor %}
+              </h1>
+            </div>
+            <hr>
+            <div class="title-bar-right">
+              <ul class="menu vertical">
+                {% for a in alts %}
+                  {% if a.locale != alt %}
+                <li><a href="{{ a.path }}" class="button">{{ a.name }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h2>{{ this.title }}</h2>
+            {{ this.body }}
+            <hr>
+            &copy; {{ now.year }} {% if alt == 'zh' %}丘鸿桔{% else %}Simon Hew{% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="columns small-0 medium-1 large-2">
+        <div class="show-for-medium">&nbsp;</div>
+      </div>
+    </div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/what-input.js"></script>
+    <script src="/js/vendor/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

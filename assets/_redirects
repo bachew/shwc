@@ -1,0 +1,8 @@
+# Netlify redirects
+
+# Pretty URLs
+/index.html  /
+/zh/index.html  /zh/
+
+# Old URLs
+/kuala-lumpur-malaysia  /
