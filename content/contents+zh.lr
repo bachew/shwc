@@ -63,8 +63,7 @@ body:
   </div>
 </div>
 
-<div class="row picture">
-</div>
+<p>还有更多照片在<a href="https://www.instagram.com/simonhewwingchun">Instagram</a>。</p>
 
 <h3>课程表</h3>
 
@@ -100,7 +99,10 @@ body:
 
 <p>如您有兴趣参观或加入我们的课程，请联系：</p>
 
-<ul><li>丘鸿桔师傅 - <a href="mailto:kit_hew@hotmail.com">kit_hew@hotmail.com</a></li></ul>
+<ul>
+  <li>丘鸿桔师傅 - <a href="mailto:kit_hew@hotmail.com">kit_hew@hotmail.com</a></li>
+  <li><a href="https://www.facebook.com/wingchunsimonhew">Facebook</a></li>
+</ul>
 
 <p>武馆地点 ：</p>
 
