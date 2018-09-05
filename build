@@ -17,6 +17,7 @@ def main():
 
     run(['rm', '-fr', out_dir])
     run(['lektor', 'clean', '--yes'])
+    run(['lektor', 'plugins', 'reinstall'])
     run(['lektor', 'build', '-O', out_dir])
 
     # XXX: 'lektor build' doesn't copy the attachments properly like 'lektor server'

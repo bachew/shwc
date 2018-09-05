@@ -4,7 +4,6 @@ from cached_property import cached_property
 from datetime import datetime
 from lektor.pluginsystem import Plugin
 from lektor.project import Project
-from os import path as osp
 
 
 class LanguageMixin(object):
