@@ -1,4 +1,5 @@
-# Netlify redirects
+# Redirect default Netlify subdomain to primary domain
+https://simonhewwingchun.netlify.com/* https://www.simonhewwingchun.com/:splat 301!
 
 # Pretty URLs
 /index.html  /

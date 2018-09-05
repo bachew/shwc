@@ -39,4 +39,4 @@ To serve the built site:
 (venv)$ ./serve
 ```
 
-Redirect rules in `assets/_redirects`.
+Netlify redirect rules in `assets/_redirects`.
