@@ -1,16 +1,19 @@
 body {
     background-color: #eee;
 }
+
 .page {
     margin: 1em auto 1em auto;
     padding: 1em;
     background-color: #fff;
     border: 0.1em solid #ccc;
 }
+
 .title-bar {
     background-color: #fff;
     color: #000;
 }
+
 .title-bar h1 div {
     display: inline-block;
     font-size: 0.8em;
@@ -20,21 +23,25 @@ body {
     margin-bottom: 1.5em;
     text-align: center;
 }
+
 .picture .columns {
     vertical-align: middle;
 }
+
 .picture img {
     display: inline-block;
     margin-bottom: 0.2em;
     padding: 0.2em;
     border: 0.1em solid #bbb;
 }
+
 .picture iframe {
     display: inline-block;
     margin-bottom: 0.2em;
     padding: 0.2em;
     border: 0.1em solid #bbb;
 }
+
 .picture small {
     display: inline-block;
 }
